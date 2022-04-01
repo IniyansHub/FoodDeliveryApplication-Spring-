@@ -1,14 +1,12 @@
 package foodDeliveryApp.repository;
 
-//import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import foodDeliveryApp.models.User;
+import foodDeliveryApp.models.DAOUser;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
+
+public interface UserRepository extends JpaRepository<DAOUser, Integer> {
 	
-	User findByEmail(String email);
+	DAOUser findByUsername(String username);
 	
-	User findByPassword(String password);
 }
